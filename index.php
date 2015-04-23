@@ -17,4 +17,12 @@
 		</form>
 		</div>
 </body>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+	add_task(); //calling the add task function
+
+	function add_task(){
+		$('.add-new-task').submit(function())
+	}
+</script>
 </html>

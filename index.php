@@ -7,23 +7,40 @@
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 </head>
 <body>
+	<div id="screen"></div>
+	<form id="input" method="post">
+	<div class="field">
+		<label for="username">Username</label>
+		<input type='text' name='username' id ='username' autocomplete='off'>
+
+</div>
+
+<div class='password'>
+	<label for='password'>Password</label>
+	<input type='text' name='password' id='password'>
+</div>
+
+<button type='button' id='register'>Register</button>
+<button type='button' id='load'>Load</button>
+
+	</form>
 	 <div class="wrap">
 			<div class="task-list">
 				<ul>
 					<?php require("includes/connect.php"); 
 
-					$mysqli = new mysqli('localhost', 'root', 'root', 'todo');
+					$mysqli = new mysqli('localhost', 'root', 'root', 'todo2');
 					$query = "SELECT * FROM tasks ORDER BY date ASC, time ASC";
 					if($result = $mysqli->query($query)){
 						$numrows = $result->num_rows;
 						if ($numrows>0) {
 							while($row = $result->fetch_assoc()){
 								$task_id = $row['id'];
-								$task_name = $row["task"];
+								$task_name = $row["tasks"];
 
 								echo '<li>
 								<span>'.$task_name. '</span>
-								<img id="'.$task_id.'" class="delete-button" width="10px" src="images/close(1).svg"/>
+								<img id="'.$task_id.'" class="delete-button" width="10px" src="/images/close.svg"/>
 								</li>';
 								
 							}

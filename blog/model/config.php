@@ -2,12 +2,12 @@
     require_once(__DIR__ . "/database.php");
     session_start();
     
-    $path = "/blog/";
+    $path = "/todo-list2/";
     
     $host = "localhost";
     $username = "root";
     $password = "root";
-    $database = "blog_db";
+    $database = "todo2";
     
     if(!isset($_SESSION["connection"])) {
         $connection = new Database($host, $username, $password, $database);

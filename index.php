@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php 
+require_once(__DIR__ . "/model/config.php");
+?>
 <html>
 <head>
 	<title>My to-do list</title>
@@ -6,6 +9,17 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 </head>
+<header>
+<button type="button">
+	<a href="<?php echo $path . "register.php"?>">register</a>
+</button>
+<button type="button">
+	<a href="<?php echo $path . "login.php"?>">Login</a>
+</button>
+<button type="button">
+	<a href="<?php echo $path . "controller/logout-user.php"?>">Logout</a>
+</button>
+</header>
 <body>
 	<div id="screen"></div>
 	<form id="input" method="post">

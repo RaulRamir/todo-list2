@@ -27,4 +27,3 @@
         echo "Username already exists";
     }
     
-    <a href="/../todo-list2/index.php>Go To To-do List 2"</a>

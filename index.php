@@ -15,7 +15,7 @@
 
 </div>
 
-<div class='password'>
+<div class='password'>s
 	<label for='password'>Password</label>
 	<input type='text' name='password' id='password'>
 </div>
